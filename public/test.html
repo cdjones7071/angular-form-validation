@@ -1,13 +1,45 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Form Validation</title>
-    <link href="index.css" rel="stylesheet" />
-  </head>
-  <body>
+-<html>
+<html ng-app="validationApp">
+   <head>
+     <title>Form Validation</title>
+     <link href="index.css" rel="stylesheet" />
+   <script src="https://cdn.rawgit.com/t4t5/sweetalert/master/dist/sweetalert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/t4t5/sweetalert/master/dist/sweetalert.css">
+   </head>
+   <body>
+ 
+  	<div id="formContainer" ng-controller="ListController">
 
-    <script src="libs/angular.js"></script>
-    <script src="index.js"></script>
-    
-  </body>
-</html>
+      <form>
+      <h2>Enter your Info here</h2>
+      	<p>Name</p>
+      	<div ng-show="invalid.name" class="error"></div>
+      	<input type="text" id="nameInput" ng-model="name" />
+      	<div ng-show="invalid.name" class="error-text">This field cannot be empty</div>
+      	<p>Email</p>
+      	<div ng-show="invalid.email" class="error"></div>
+      	<input type="email" id="emailInput" ng-model="email"/>
+      	<div ng-show="invalid.email" class="red-text">Email must have contain an '@'</div>
+      	<p>Message</p>
+      	<div ng-show="invalid.message" class="error"></div>
+      	<textarea id="messageInput" ng-model="message" ></textarea>
+      	<div ng-show="invalid.message" class="red-text">Message cannot be left empty</div>
+      	<br /><p>Website</p>
+        <div ng-show="invalid.website" class="error"></div>
+        <input type="url" id="websiteInput" ng-model="website"/>
+        <div ng-show="invalid.website" class="red-text">Website must contain a domain</div>
+      	
+      	<button id="submitButton" ng-click="submitForm()">Submit</button>
+
+      </form>
+
+    </div>
+
+
+    <script src="libs/underscore.js"></script>
+     <script src="libs/angular.js"></script>
+     <script src="index.js"></script>
+     
+   </body>
+ </html>

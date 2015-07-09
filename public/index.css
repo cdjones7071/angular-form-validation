@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#nameInput{
+  height: 20px;
+  width: 30%;
+  font-weight: bold;
+  background-color: #FFAC74;
+  font-color: black;
+}
+#emailInput{
+  height: 20px;
+  width: 30%;
+  font-weight: bold;
+  background-color: #FFAC74;
+  font-color: black;
+}
+#messageInput{
+  height: 100px;
+  width: 40%;
+  font-weight: bold;
+  background-color: #FFAC74;
+  font-color: black;
+}
+#websiteInput{
+  height: 20px;
+  width: 30%;
+  font-weight: bold;
+  background-color: #FFAC74;
+  font-color: black;
+}
+h2{
+  font-size: 35px;
+  text-align: left;
+  color: #B64A00;
+}
+
+input[type="submit"] {
+  display: none;
+}
+
+.error {
+  height: 2px;
+  background: red;
+  width: 30%
+
+}
+
+.red-bar.left {
+  display: none;
+}
+
+.invalid {
+  border-left: solid 5px red;
+}
+#formContainer{
+  background-color: #FF791E;
+  height: 100vh;
+}
+button{
+  border-radius: 15px;
+  width: 8%;
+  height: 20px;
+  background-color: #FFAC74;
+}
