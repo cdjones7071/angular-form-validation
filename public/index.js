@@ -23,7 +23,7 @@ angular.module("validationApp", [])
      if ($scope.email !== undefined) {
        document.getElementById("emailInput").setAttribute("class", "error-border")
      }
-     for (var i = 0; i < emailArr.length; i) {
+     for (var i = 0; i < emailArr.length; i++) {
        if (emailArr[i] === "@") {
          document.getElementById("emailInput").setAttribute("class", "no-border")
        }
